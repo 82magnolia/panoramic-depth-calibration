@@ -94,6 +94,10 @@ Then, place the data in the directory structure below.
             └── weddingHall_1.txt
 
 ## Running
+### Pre-trained model download
+To get started, download the pre-trained depth estimation model from the [link](https://drive.google.com/file/d/1qHnRz-Op2HpuszmPC94QogR7nmfufVip/view?usp=sharing).
+Then, make a folder `pretrained_depth_models` and place the model weights `unet_release.pth` in the folder.
+
 ### Online calibration
 Run the following command for Stanford 2D-3D-S.
 ```
@@ -107,7 +111,7 @@ mkdir log
 python main.py --config config/omniscenes.ini --log log/LOG_FOLDER
 ```
 
-### Checking Logs
+### Checking logs
 After calibration, the log folder will contain the `config.ini` used to run the experiment, calibrated depth estimation network `model.pth`, and a log file containing performance metrics.
 To view the metrics, run the following command.
 ```
