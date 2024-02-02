@@ -96,7 +96,12 @@ Then, place the data in the directory structure below.
 ## Running
 ### Pre-trained model download
 To get started, download the pre-trained depth estimation model from the [link](https://drive.google.com/file/d/1qHnRz-Op2HpuszmPC94QogR7nmfufVip/view?usp=sharing).
-Then, make a folder `pretrained_depth_models` and place the model weights `unet_release.pth` in the folder.
+Then, run the following command to place the model weights in the repository.
+```
+cd ~/Projects/panoramic-depth-estimation/  # Assume that the code repository is situated here
+mkdir pretrained_depth_models
+mv ~/Downloads/unet_release.pth pretrained_depth_models/  # Assume model weights are downloaded here
+```
 
 ### Online calibration
 Run the following command for Stanford 2D-3D-S.
