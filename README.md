@@ -94,6 +94,7 @@ Then, place the data in the directory structure below.
             └── weddingHall_1.txt
 
 ## Running
+### Online calibration
 Run the following command for Stanford 2D-3D-S.
 ```
 mkdir log
@@ -105,12 +106,16 @@ Similarly, run the following command for OmniScenes.
 mkdir log
 python main.py --config config/omniscenes.ini --log log/LOG_FOLDER
 ```
+
+### Checking Logs
 After calibration, the log folder will contain the `config.ini` used to run the experiment, calibrated depth estimation network `model.pth`, and a log file containing performance metrics.
 To view the metrics, run the following command.
 ```
 python process_logger.py log/LOG_FOLDER/result.pkl
 ```
-Note that one can also run calibration selectively for designated rooms only. For example, to run calibation only on images in `room_4` from OmniScenes, run the following command.
+
+### Running on single scenes
+Note that one can also run calibration selectively for designated scenes only. For example, to run calibation only on images in `room_4` from OmniScenes, run the following command.
 ```
 python main.py --config configs/hoam_da.ini --override 'room_type=room_4' --log log/LOG_FOLDER
 ```
