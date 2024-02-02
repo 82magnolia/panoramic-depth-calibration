@@ -12,6 +12,7 @@ Below we show a qualitative sample, where our adaptation scheme leads to largely
 In this repository, we provide the implementation and instructions for running our calibration method. If you have any questions regarding the implementation, please leave an issue or contact 82magnolia@snu.ac.kr.
 
 ## Installation
+### GPUs supporting CUDA < 11.3
 First setup a conda environment.
 ```
 conda create -n pytorch3d python=3.9
@@ -23,7 +24,7 @@ conda install pytorch3d -c pytorch3d
 ```
 Then, install other dependencies with `pip install -r requirements.txt`.
 
-## Installation (CUDA >= 11.3)
+### GPUs supporting CUDA >= 11.3
 For GPUs supporting CUDA versions greater than `11.3` (e.g., RTX3090), installation is much more straightforward. Run the following sequence of commands.
 ```
 conda create -n pytorch3d python=3.9
