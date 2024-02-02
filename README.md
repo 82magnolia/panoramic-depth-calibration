@@ -5,6 +5,7 @@ Official PyTorch implementation of **Calibrating Panoramic Depth Estimation for 
 
 Our method *calibrates* a pre-trained panoramic depth estimation network to new, unseen domains using test-time adaptation.
 The resulting network can be used for downstream tasks such as visual navigation or map-free localization.
+Below we show a qualitative sample, where our adaptation scheme leads to largely improved depth predictions amidst salt-and-pepper noise.
 
 [<img src="adaptation_sample.png" width="600"/>](adaptation_sample.png)
 
