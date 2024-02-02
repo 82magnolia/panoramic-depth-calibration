@@ -35,7 +35,7 @@ pip install --no-index --no-cache-dir pytorch3d -f https://dl.fbaipublicfiles.co
 pip install -r requirements.txt
 ```
 
-## Dataset preparation (Stanford 2D-3D-S & OmniScenes)
+## Dataset Preparation (Stanford 2D-3D-S & OmniScenes)
 First ownload the panorama images (`pano`) and poses (`pose`) from the following [link](https://docs.google.com/forms/d/e/1FAIpQLScFR0U8WEUtb7tgjOhhnl31OrkEs73-Y8bQwPeXgebqVKNMpQ/viewform?c=0&w=1) (download the one without `XYZ`) and the point cloud (`pcd_not_aligned`) from the following [link](https://docs.google.com/forms/d/e/1FAIpQLScDimvNMCGhy_rmBA2gHfDu3naktRm6A8BPwAWWDv-Uhm6Shw/viewform?c=0&w=1).
 Also, download the 3D line segments through the following [link](https://drive.google.com/file/d/1Ur67nN8Q2n_CXQxbI341TRUbQEmtEjuD/view?usp=sharing).
 Then, place the data in the directory structure below.
@@ -92,4 +92,31 @@ Then, place the data in the directory structure below.
             ⋮
             │
             └── weddingHall_1.txt
+
+## Running
+Run the following command for Stanford 2D-3D-S.
+```
+mkdir log
+python main.py --config config/stanford.ini --log log/LOG_FOLDER
+```
+
+Similarly, run the following command for OmniScenes
+```
+mkdir log
+python main.py --config config/omniscenes.ini --log log/LOG_FOLDER
+```
+
+## Citation
+If you find this repository useful, please cite
+
+```bibtex
+@InProceedings{Kim_2023_ICCV,
+    author    = {Kim, Junho and Lee, Eun Sun and Kim, Young Min},
+    title     = {Calibrating Panoramic Depth Estimation for Practical Localization and Mapping},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2023},
+    pages     = {8830-8840}
+}```
+
 
