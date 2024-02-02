@@ -117,7 +117,7 @@ python process_logger.py log/LOG_FOLDER/result.pkl
 ### Running on single scenes
 Note that one can also run calibration selectively for designated scenes only. For example, to run calibation only on images in `room_4` from OmniScenes, run the following command.
 ```
-python main.py --config configs/hoam_da.ini --override 'room_type=room_4' --log log/LOG_FOLDER
+python main.py --config configs/omniscenes_da.ini --override 'room_type=room_4' --log log/LOG_FOLDER
 ```
 
 ## Citation
