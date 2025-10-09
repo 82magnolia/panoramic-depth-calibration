@@ -174,6 +174,10 @@
               Given a single panorama image, panoramic depth estimation outputs a dense depth map from pre-trained neural networks.
               Since a full-surround 3D map is obtainable from a single neural network inference, panoramic depth estimation can enable light-weight 3D map creation.              
             </p>
+            <img src="./assets/nav_pano.png" width="100%" style="display: block; margin: auto" />
+            <p class="content">
+              By using depth estimations from panoramic images to build 3D maps, one can perform efficient visual navigation as a single panoramic capture covers a large area.
+            </p>
           </div>
         </div>
       </div>
@@ -324,6 +328,36 @@
             <p class="content">
               Here's an animation showing the depth estimation results obtained from our calibration scheme.
               While the initial depth estimation network produces noisy depth estimates, the calibration leads to enhanced depth predictions after a few training iterations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- content section with left-side subtitle -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns">
+          <div class="column is-one-fifth">
+            <h2 class="subtitle is-4 is-size-3-mobile has-text-weight-medium publication-keywords">
+              Navigation with Panoramic Depth Estimation
+            </h2>
+          </div>
+          <div class="column has-text-justified">
+            <img src="./assets/nav_setup.png" width="100%" style="display: block; margin: auto" />
+            <p class="content">
+              We test our adaptation algorithm on visual navigation, where we consider a robot agent equipped with a 360-degree camera and a noisy IMU.
+              The agent creates local grid maps from depth estimations, and fuses them to a global map using IMU measurements.
+              During navigation, the agent regularly caches panoramic images, which are further used for online adaptation.
+            </p>
+            <img src="./assets/nav_qualitative.png" width="100%" style="display: block; margin: auto" />
+            <p class="content">
+              Using our online adaptation scheme, we can improve the quality of grid maps used for visual navigation.
+              While initial depth estimates in new, unseen environments are quite noisy without adaptation, our method enables robot agents to build more accurate maps without large amounts of labeled data.
+            </p>
+            <img src="./assets/nav_quantitative.png" width="60%" style="display: block; margin: auto" />
+            <p class="content">
+              Quantitatively, our online adaptation scheme leads to enhanced exploration and point-goal navigation performance.
             </p>
           </div>
         </div>
